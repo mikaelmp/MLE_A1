@@ -76,6 +76,11 @@ def process_gold_table_features(silver_attributes_directory, silver_financials_d
         col("Total_EMI_per_month").cast(FloatType()),
         col("Amount_invested_monthly").cast(FloatType()),
         col("Payment_Behaviour").cast(StringType()),
+        col("Num_Bank_Accounts").cast(IntegerType()),
+        col("Num_Credit_Card").cast(IntegerType()),
+        col("Interest_Rate").cast(IntegerType()),
+        col("Num_of_Delayed_Payment").cast(IntegerType()),
+        col("Num_Credit_Inquiries").cast(IntegerType())
     )
 
     # Convert to Pandas to make one-hot encoding process more straightforward
